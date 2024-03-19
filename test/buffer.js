@@ -1,4 +1,4 @@
-import {Decoder, PacketType} from "../build/esm/index.js";
+import { Decoder, PacketType } from "../build/esm/index.js";
 import * as helpers from "./helpers.js";
 import expect from "expect.js";
 
@@ -34,7 +34,9 @@ describe("Buffer", () => {
     const decoder = new Decoder();
 
     expect(() => {
-      decoder.add('51-[[1,2],"hello",{"_placeholder":3,"num":4},true,"splice"]');
+      decoder.add(
+        '51-[[1,2],"hello",{"_placeholder":3,"num":4},true,"splice"]'
+      );
       decoder.add(Buffer.from("world"));
     }).to.throwException(/^illegal attachments$/);
   });

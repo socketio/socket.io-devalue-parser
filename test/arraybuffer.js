@@ -1,4 +1,4 @@
-import {Encoder, PacketType} from "../build/esm/index.js";
+import { Encoder, PacketType } from "../build/esm/index.js";
 import expect from "expect.js";
 import * as helpers from "./helpers.js";
 

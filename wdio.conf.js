@@ -91,4 +91,4 @@ if (process.env.CI === "true") {
   ];
 }
 
-export { config }
+export { config };

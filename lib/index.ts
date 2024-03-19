@@ -1,6 +1,6 @@
-import {Emitter} from "@socket.io/component-emitter";
-import {deconstructPacket, reconstructPacket} from "./binary.js";
-import {hasBinary, isBinary} from "./is-binary.js";
+import { Emitter } from "@socket.io/component-emitter";
+import { deconstructPacket, reconstructPacket } from "./binary.js";
+import { hasBinary, isBinary } from "./is-binary.js";
 import debugModule from "debug"; // debug()
 import * as devalue from "devalue";
 
@@ -148,7 +148,7 @@ export class Decoder extends Emitter<{}, {}, DecoderReservedEvents> {
   /**
    * Decoder constructor
    *
-   * @param {function?} revivers - custom reviver to pass down to `devalue.parse`
+   * @param {Object?} revivers - custom revivers to pass down to `devalue.parse`
    */
   constructor(private revivers?: Record<string, (value: any) => any>) {
     super();

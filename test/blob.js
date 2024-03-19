@@ -1,4 +1,4 @@
-import {PacketType} from "../build/esm/index.js";
+import { PacketType } from "../build/esm/index.js";
 import * as helpers from "./helpers.js";
 
 const BlobBuilderImpl =

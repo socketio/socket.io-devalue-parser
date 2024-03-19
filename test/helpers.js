@@ -1,5 +1,5 @@
-import * as parser from "../build/esm/index.js"
-import expect from "expect.js"
+import * as parser from "../build/esm/index.js";
+import expect from "expect.js";
 
 const encoder = new parser.Encoder();
 
@@ -35,4 +35,4 @@ const test_bin = (obj) => {
   });
 };
 
-export { test, test_bin }
+export { test, test_bin };

@@ -4,4 +4,4 @@
 // some tests do not yet work in both
 const browser = typeof window !== "undefined";
 
-export { browser }
+export { browser };
