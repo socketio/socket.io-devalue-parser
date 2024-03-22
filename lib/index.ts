@@ -4,7 +4,7 @@ import { hasBinary, isBinary } from "./is-binary.js";
 import debugModule from "debug"; // debug()
 import * as devalue from "devalue";
 
-const debug = debugModule("socket.io-parser"); // debug()
+const debug = debugModule("socket.io-devalue-parser"); // debug()
 
 /**
  * These strings must not be used as event names, as they have a special meaning.

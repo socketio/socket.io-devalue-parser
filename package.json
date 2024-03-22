@@ -1,10 +1,10 @@
 {
-  "name": "socket.io-parser",
-  "version": "4.2.4",
-  "description": "socket.io protocol parser",
+  "name": "@socket.io/devalue-parser",
+  "version": "0.1.0",
+  "description": "Socket.IO parser based on devalue",
   "repository": {
     "type": "git",
-    "url": "https://github.com/socketio/socket.io-parser.git"
+    "url": "https://github.com/socketio/socket.io-devalue-parser.git"
   },
   "type": "module",
   "files": [

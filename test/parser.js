@@ -7,7 +7,7 @@ import {
 import expect from "expect.js";
 import * as helpers from "./helpers.js";
 
-describe("socket.io-parser", () => {
+describe("socket.io-devalue-parser", () => {
   it("exposes types", () => {
     expect(PacketType.CONNECT).to.be.a("number");
     expect(PacketType.DISCONNECT).to.be.a("number");
