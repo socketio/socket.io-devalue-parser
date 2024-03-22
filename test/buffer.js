@@ -1,6 +1,6 @@
-const { PacketType, Decoder } = require("../");
-const helpers = require("./helpers.js");
-const expect = require("expect.js");
+import { Decoder, PacketType } from "../build/esm/index.js";
+import * as helpers from "./helpers.js";
+import expect from "expect.js";
 
 describe("Buffer", () => {
   it("encodes a Buffer", () => {
@@ -34,7 +34,9 @@ describe("Buffer", () => {
     const decoder = new Decoder();
 
     expect(() => {
-      decoder.add('51-["hello",{"_placeholder":true,"num":"splice"}]');
+      decoder.add(
+        '51-[[1,2],"hello",{"_placeholder":3,"num":4},true,"splice"]'
+      );
       decoder.add(Buffer.from("world"));
     }).to.throwException(/^illegal attachments$/);
   });
@@ -43,7 +45,7 @@ describe("Buffer", () => {
     const decoder = new Decoder();
 
     expect(() => {
-      decoder.add('51-["hello",{"_placeholder":true,"num":1}]');
+      decoder.add('51-[[1,2],"hello",{"_placeholder":3,"num":4},true,1]');
       decoder.add(Buffer.from("world"));
     }).to.throwException(/^illegal attachments$/);
   });
@@ -60,8 +62,8 @@ describe("Buffer", () => {
     const decoder = new Decoder();
 
     expect(() => {
-      decoder.add('51-["hello",{"_placeholder":true,"num":0}]');
-      decoder.add('2["hello"]');
+      decoder.add('51-[[1,2],"hello",{"_placeholder":3,"num":4},true,0]');
+      decoder.add('2[[1],"hello"]');
     }).to.throwException(/^got plaintext data when reconstructing a packet$/);
   });
 });
