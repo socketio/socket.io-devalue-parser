@@ -55,5 +55,10 @@
   "license": "MIT",
   "engines": {
     "node": ">=10.0.0"
+  },
+  "overrides": {
+    "webdriver": {
+      "@types/ws": "8.5.4"
+    }
   }
 }
